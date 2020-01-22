@@ -83,6 +83,7 @@ footer, header, hgroup, menu, nav, section {
 		font-family: @linkfont;
 		color: @bluetext;
 		font-size: 1.2rem;
+		line-height: 1.5;
 		&:hover{
 			color: @lightbluetext;
 		}
@@ -97,11 +98,34 @@ footer, header, hgroup, menu, nav, section {
 	padding: 3%;
 	justify-content: space-between;
 	align-items: center;
-	p, img{
+	img{
 		width: 45%;
 	}
 	@media (max-width: @bpmobile){
 		flex-flow: column nowrap;
+	}
+}
+
+.contactboxmix(){
+	background-color: @darkbackground;
+	border: 1px solid red;
+	width: 60%;
+	padding: 2%;
+	margin: 3% 0;
+	display: flex;
+	flex-flow: row wrap;
+	size: 1.6rem;
+	h2{
+		font-family: @headingfont;
+		width: 80%;
+		text-align: center;
+		font-size: 1.6rem;
+	}
+	p{
+		font-family: @bodyfont;
+		width: 45%;
+		size: 1rem;
+		font-size: 0.8rem;
 	}
 }
 
@@ -111,7 +135,7 @@ body {
 	background-color: @lightbackground;
 }
 ol, ul {
-	list-style: none;
+	list-style: disc inside none;
 }
 blockquote, q {
 	quotes: none;
@@ -152,6 +176,7 @@ nav{
 	justify-content: space-around;
 	.linkboxmix();
 	padding: 3%;
+	border: 1px dotted @browntext;
 }
 
 .headlinewrapper{
@@ -194,9 +219,37 @@ nav{
 }
 
 .halfbox{
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.contactbox{
+	background-color: @darkbackground;
+	width: 60%;
+	padding: 2%;
+	margin: 3% 0;
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px dotted @browntext;
+	@media (max-width: @bpmobile){
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	h2{
+		font-family: @headingfont;
+		width: 80%;
+		text-align: center;
+		font-size: 1.2rem;
+		padding-bottom: 3px;
+	}
+	p{
+		font-family: @bodyfont;
+		width: 45%;
+		size: 1rem;
+		font-size: 0.8rem;
+		text-align: center;
+		padding: 2px 0;
+	}
 }

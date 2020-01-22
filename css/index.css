@@ -111,7 +111,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style: disc inside none;
 }
 blockquote,
 q {
@@ -155,6 +155,7 @@ nav {
   background-color: #FDF5E6;
   border: 1px solid #8B4513;
   padding: 3%;
+  border: 1px dotted #8B4513;
 }
 nav h1,
 nav h2,
@@ -172,6 +173,7 @@ nav li {
   font-family: 'Oswald', sans-serif;
   color: #191970;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 nav p:hover,
 nav a:hover,
@@ -256,7 +258,6 @@ nav li:hover {
   color: #8B4513;
   font-size: 1.2rem;
 }
-.darkbox p,
 .darkbox img {
   width: 45%;
 }
@@ -292,13 +293,13 @@ nav li:hover {
   font-family: 'Oswald', sans-serif;
   color: #191970;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 .lightbox p:hover,
 .lightbox a:hover,
 .lightbox li:hover {
   color: #6495ED;
 }
-.lightbox p,
 .lightbox img {
   width: 45%;
 }
@@ -308,9 +309,38 @@ nav li:hover {
   }
 }
 .halfbox {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.contactbox {
+  background-color: #FAEBD7;
+  width: 60%;
+  padding: 2%;
+  margin: 3% 0;
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px dotted #8B4513;
+}
+@media (max-width: 500px) {
+  .contactbox {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+}
+.contactbox h2 {
+  font-family: 'Abel', sans-serif;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 3px;
+}
+.contactbox p {
+  font-family: 'Lato', sans-serif;
+  width: 45%;
+  size: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 2px 0;
 }
